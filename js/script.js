@@ -1,9 +1,10 @@
 /******************************************
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
+Student: Jing Pang
 ******************************************/
 
-/* Quote container */
+/* Container - Holds the quote properties */
 
 var quotes = [
   {
@@ -36,8 +37,7 @@ var quotes = [
   }
   ];
   
-  /* Function -
-  // Generates a random number
+  /* Function - Generates a random number
   // Returns a property value based on the random number output
   */
   
@@ -53,8 +53,7 @@ var quotes = [
   document.getElementById("quote-box").className += "tag"
   
   
-  /* Function -
-  // Generates a random bg color
+  /* Function - Generates a random bg color
   // To insure the text is readable, and that the contrast between text and bg is big enough -
   the last value in the RGB for y and z is set to below 100.
   */
@@ -69,7 +68,7 @@ var quotes = [
 
 };
 
- /* Function -
+ /* Function - Prints the quote
   // Holds the random quote, chosen from getRandomQuote
   // Updates the html-string container with the quote and source
   // Checks if citation, year and tag is defined - if they are - update html-string container
