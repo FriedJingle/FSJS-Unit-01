@@ -104,7 +104,7 @@ var quotes = [
 
  /* Function: quoteReset()
  // Resets the function, by clearing and reset. 
- //  Insuring, that when clicked on the button, you do not have to wait 20 secs before next quote startrs
+ // Insuring, that when clicked on the button, you do not have to wait 20 secs before next quote starts
  // Sets the interval to 20 secs. 
  */
 
