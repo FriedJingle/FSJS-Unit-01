@@ -19,15 +19,15 @@ var quotes = [
     tag:"Religion"
   },
   {
-    quote:"Whenever I feel the need to exercise, I lie down until it goes away",
-    source:"Paul Terry",
-    tag:"Laziness"
+    quote:"Before you judge a man, walk a mile in his shoes. After that who cares?… He’s a mile away and you’ve got his shoes!",
+    source:"Billy Connolly",
+    tag:"Humor"
   },
   {
-    quote:"Never memorize something that you can look up.",
-    source:"Albert Einstein",
+    quote:"He who laughs last didn’t get the joke.",
+    source:"Charles de Gaulle",
     year:"1956",
-    tag:"Logic"
+    tag:"Humor"
   },
   {
     quote:"If a cluttered desk is a sign of a cluttered mind, of what, then, is an empty desk a sign?",
@@ -100,12 +100,22 @@ var quotes = [
 
   }
 
- /* Quote timer 
- // updates the quote and bg color every 20 seconds
+  printQuote();
+
+ /* Function: quoteReset()
+ // Resets the function, by clearing and reset. 
+ //  Insuring, that when clicked on the button, you do not have to wait 20 secs before next quote startrs
+ // Sets the interval to 20 secs. 
  */
 
-  var quoteTimer = setInterval(printQuote, 20000);
+var quoteTimer;
 
+function quoteReset(){
+clearInterval(quoteTimer);
+printQuote();
+quoteTimer = setInterval(printQuote, 20000);
+ };
+quoteReset();
 
  /***
     When the "Show another quote" button is clicked, the event listener
@@ -113,4 +123,4 @@ var quotes = [
     function.
   ***/
 
- document.getElementById('loadQuote').addEventListener("click",printQuote,randomBgColor, false);
+ document.getElementById('loadQuote').addEventListener("click",quoteReset,false);
