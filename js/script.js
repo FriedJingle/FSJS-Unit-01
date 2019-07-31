@@ -61,6 +61,8 @@ var htmlStringContainer = "";
 // Checks if citation, year and tag is defined - if they are - update html-string container 
 */
 
+var myVar = setInterval(printQuote, 1000);
+
 
 function printQuote(){
   var randomQuoteContainer = getRandomQuote(); 
@@ -86,8 +88,12 @@ function printQuote(){
 }
 printQuote();
 
-setInterval(printQuote, 10000);
 
+
+function myStopFunction() {
+  clearInterval(myVar);
+}
+myStopFunction();
 
   document.getElementById('quote-box').innerHTML = htmlStringContainer;
  
